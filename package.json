@@ -4,9 +4,14 @@
   "description": "Workshop for creating a particle system from a functional approach",
   "main": "index.js",
   "scripts": {
-    "test": "test.js",
     "start": "webpack-dev-server --open --color --hot",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "jest --watch --config=jest.config.js",
+    "test-no-watch": "jest --config=jest.config.js",
+    "eslint": "eslint \"src/**/*.js\"",
+    "validate": "npm-run-all --parallel eslint test-no-watch",
+    "precommit": "npm run eslint",
+    "prepush": "npm run validate"
   },
   "repository": {
     "type": "git",
