@@ -1,7 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" time="1.551">
-  <testsuite name="λ :: RequestAnimationFrame" errors="0" failures="0" skipped="0" timestamp="2019-06-19T16:58:25" time="0.672" tests="1">
-    <testcase classname="λ :: RequestAnimationFrame execute requestAnimationFrame" name="λ :: RequestAnimationFrame execute requestAnimationFrame" time="0.005">
+<testsuites name="jest tests" tests="11" failures="7" time="0.117">
+  <testsuite name="λ :: Test Particle" errors="0" failures="7" skipped="4" timestamp="2019-06-20T10:32:28" time="0.102" tests="11">
+    <testcase classname="λ :: Test Particle members of a particle a particle must have a default position Vector" name="λ :: Test Particle members of a particle a particle must have a default position Vector" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="λ :: Test Particle members of a particle a particle must have a default acceleration Vector" name="λ :: Test Particle members of a particle a particle must have a default acceleration Vector" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="λ :: Test Particle members of a particle a particle must have a default velocity Vector" name="λ :: Test Particle members of a particle a particle must have a default velocity Vector" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="λ :: Test Particle members of a particle a particle must have a default color in Hex code" name="λ :: Test Particle members of a particle a particle must have a default color in Hex code" time="0.002">
+      <failure>TypeError: expect(...).toBeObject is not a function
+    at Object.toBeObject (/Users/rerades/Desktop/psf/test/particle.test.js:23:26)
+    at Object.asyncJestTest (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at resolve (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at promise.then (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+    <testcase classname="λ :: Test Particle get a particle" name="λ :: Test Particle get a particle" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="λ :: Test Particle calculate particle disturbance acceleration affected by other fields" name="λ :: Test Particle calculate particle disturbance acceleration affected by other fields" time="0">
+      <failure>ReferenceError: Field is not defined
+    at Object.&lt;anonymous&gt; (/Users/rerades/Desktop/psf/test/particle.test.js:53:20)
+    at Object.asyncJestTest (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at resolve (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at promise.then (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+    <testcase classname="λ :: Test Particle calculate particle disturbance acceleration affected by other fields, edge case were no acceleration is been affected" name="λ :: Test Particle calculate particle disturbance acceleration affected by other fields, edge case were no acceleration is been affected" time="0">
+      <failure>ReferenceError: Field is not defined
+    at Object.&lt;anonymous&gt; (/Users/rerades/Desktop/psf/test/particle.test.js:76:20)
+    at Object.asyncJestTest (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at resolve (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at promise.then (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+    <testcase classname="λ :: Test Particle move particle" name="λ :: Test Particle move particle" time="0.001">
+      <failure>TypeError: _Particle.Particle.move is not a function
+    at Object.move (/Users/rerades/Desktop/psf/test/particle.test.js:100:21)
+    at Object.asyncJestTest (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at resolve (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at promise.then (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+    <testcase classname="λ :: Test Particle particle is in bound" name="λ :: Test Particle particle is in bound" time="0">
+      <failure>TypeError: _Particle.Particle.isInBound is not a function
+    at Object.isInBound (/Users/rerades/Desktop/psf/test/particle.test.js:113:21)
+    at Object.asyncJestTest (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at resolve (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at promise.then (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+    <testcase classname="λ :: Test Particle attach particle to emitter" name="λ :: Test Particle attach particle to emitter" time="0.001">
+      <failure>ReferenceError: emitter is not defined
+    at Object.emitter (/Users/rerades/Desktop/psf/test/particle.test.js:118:19)
+    at Object.asyncJestTest (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at resolve (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at promise.then (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+    <testcase classname="λ :: Test Particle attach custom particle to emitter" name="λ :: Test Particle attach custom particle to emitter" time="0">
+      <failure>ReferenceError: emitter is not defined
+    at Object.emitter (/Users/rerades/Desktop/psf/test/particle.test.js:131:19)
+    at Object.asyncJestTest (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at resolve (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at promise.then (/Users/rerades/Desktop/psf/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
   </testsuite>
 </testsuites>

@@ -24,4 +24,12 @@
   -. Vector.copy
   -. Vector.polarToCart
   
+## Particle
+  -. Particle
+    -- position
+    -- velocity
+    -- acceleration
+    -- color
+    -- size 
+  -. Particle.move --> will depend on velocity  
    

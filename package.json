@@ -44,6 +44,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^2.4.1",
     "jest": "^24.8.0",
+    "jest-canvas-mock": "^2.1.0",
     "jest-extended": "^0.11.1",
     "jest-junit": "^6.4.0",
     "jest-snapshot": "^24.8.0",
