@@ -12,5 +12,16 @@
         WebPack
 
 ## Event loop
-  We need to create a loop for the event painting.
-  To do so we will use requestAnimationFrame
+  We need to create a loop for the event painting. To do so we will use requestAnimationFrame
+  
+## Vector
+  -. Cartesian Vector
+  -. Vector.angle
+  -. Vector.magnitude (hypotenuse) 
+  -. Vector.add
+  -. Vector.substract
+  -. Vector.scale
+  -. Vector.copy
+  -. Vector.polarToCart
+  
+   

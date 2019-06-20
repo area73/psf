@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" time="1.987">
-  <testsuite name="λ :: RequestAnimationFrame" errors="0" failures="0" skipped="0" timestamp="2019-06-19T16:56:57" time="0.8" tests="1">
-    <testcase classname="λ :: RequestAnimationFrame execute requestAnimationFrame" name="λ :: RequestAnimationFrame execute requestAnimationFrame" time="0.006">
+<testsuites name="jest tests" tests="1" failures="0" time="1.551">
+  <testsuite name="λ :: RequestAnimationFrame" errors="0" failures="0" skipped="0" timestamp="2019-06-19T16:58:25" time="0.672" tests="1">
+    <testcase classname="λ :: RequestAnimationFrame execute requestAnimationFrame" name="λ :: RequestAnimationFrame execute requestAnimationFrame" time="0.005">
     </testcase>
   </testsuite>
 </testsuites>
