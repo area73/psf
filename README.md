@@ -38,3 +38,11 @@ We will start to add random particles and move them
 1) From a fixed array move particles  [EX01]
   -. log output
   -. map array to move particle
+
+## 06 ADDING NEW PARTICLES
+ We want to add new particles every time we request a frame
+  -.DRAWBACKS::  Since we are dealing with immutable , we are facing now a lot of constants 
+  definitions and redefinitions every time we add a new one.
+  Can we do it better ? ... composition to the rescue
+
+  

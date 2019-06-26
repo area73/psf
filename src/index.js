@@ -8,12 +8,11 @@ const particles = [
 ];
 
 const loop = particlesArray => () => {
-  // 1 .- trace
-  console.dir(
-    `${particlesArray[0].position.x} , ${particlesArray[0].position.y}`,
-  );
-  // 2 .- move particles (using map)
-  const newParticles = particlesArray.map(Particle.move); //  debugger;
+  console.log(particlesArray.length);
+  // add new particle
+  const newGroupOfParticles = [...particlesArray, Particle()];
+  // move particles
+  const newParticles = newGroupOfParticles.map(Particle.move);
   // last .- Loop
   requestAnimationFrame(loop(newParticles));
 };
