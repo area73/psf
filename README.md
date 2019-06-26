@@ -49,5 +49,7 @@ We will start to add random particles and move them
 ## 07 Composition  (src/functionalUtils.js)
   -. we can solve las problem by chaining function's results, since all of them are returning a new 
   array
-  -. Or we can compose those functions  
-  -. Or pipe  
+  -. Or we can compose those 2 functions
+  -. Make it generic  
+  -. Or pipe 
+  -. We would also like to add some trace inside our composed point free programming --> tap  
