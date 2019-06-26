@@ -1,11 +1,21 @@
-// 1 - dmo requestAnimationFrame --> window.requestAnimationFrame(callback);
-// https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+import { Particle } from './Particle.js';
+import { Vector } from './Vector.js';
 
-let i = 0;
+const particles = [
+  Particle({ position: Vector(10, 50), acceleration: Vector(-5, -2) }),
+  Particle(),
+  Particle({ position: Vector(10, 50), acceleration: Vector(1, 7) }),
+];
 
-function loop() {
-  console.log((i += 1));
-  requestAnimationFrame(loop);
-}
+const loop = particlesArray => () => {
+  // 1 .- trace
+  console.dir(
+    `${particlesArray[0].position.x} , ${particlesArray[0].position.y}`,
+  );
+  // 2 .- move particles (using map)
+  const newParticles = particlesArray.map(Particle.move); //  debugger;
+  // last .- Loop
+  requestAnimationFrame(loop(newParticles));
+};
 
-requestAnimationFrame(loop);
+requestAnimationFrame(loop(particles));

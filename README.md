@@ -11,10 +11,10 @@
         editorConfig
         WebPack
 
-## Event loop
+## 02 Event loop
   We need to create a loop for the event painting. To do so we will use requestAnimationFrame
   
-## Vector
+## 03 Vector
   -. Cartesian Vector
   -. Vector.angle
   -. Vector.magnitude (hypotenuse) 
@@ -24,7 +24,7 @@
   -. Vector.copy
   -. Vector.polarToCart
   
-## Particle
+## 04 Particle
   -. Particle
     -- position
     -- velocity
@@ -33,3 +33,8 @@
     -- size 
   -. Particle.move --> will depend on velocity  
    
+## 05 Moving particles
+We will start to add random particles and move them
+1) From a fixed array move particles  [EX01]
+  -. log output
+  -. map array to move particle
