@@ -45,4 +45,9 @@ We will start to add random particles and move them
   definitions and redefinitions every time we add a new one.
   Can we do it better ? ... composition to the rescue
 
-  
+
+## 07 Composition  (src/functionalUtils.js)
+  -. we can solve las problem by chaining function's results, since all of them are returning a new 
+  array
+  -. Or we can compose those functions  
+  -. Or pipe  
