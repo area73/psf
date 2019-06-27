@@ -64,9 +64,10 @@ There’s two main ways they do dealt with this:
     We take any impurities in our code, and shove them into function parameters. Then we can treat 
     them as some other function’s responsibility.
     This is very interesting for unit testing our functions because we can stub our impure ends 
-    and pas it as a parameter
+    and pass them as parameters
 
    2-. Using an Effect functor, (procrastination)
     
     A side effect isn’t a side effect until it actually happens. 
-    So we will wrap our unsafe function inside another function
+    So we will wrap our unsafe function inside another function -_> the effect functor.
+    The Effect functor, works by wrapping everything behind a function. To run the effects, we have to make a deliberate effort to run the wrapper function.
