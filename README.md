@@ -53,3 +53,20 @@ We will start to add random particles and move them
   -. Make it generic  
   -. Or pipe 
   -. We would also like to add some trace inside our composed point free programming --> tap  
+
+## 08 Dealing with impure functions (side effects)
+https://jrsinclair.com/articles/2018/how-to-deal-with-dirty-side-effects-in-your-pure-functional-javascript/
+
+There’s two main ways they do dealt with this:
+
+1-. Dependency injection
+ 
+    We take any impurities in our code, and shove them into function parameters. Then we can treat 
+    them as some other function’s responsibility.
+    This is very interesting for unit testing our functions because we can stub our impure ends 
+    and pas it as a parameter
+
+   2-. Using an Effect functor, (procrastination)
+    
+    A side effect isn’t a side effect until it actually happens. 
+    So we will wrap our unsafe function inside another function

@@ -12,10 +12,20 @@ const particles = [
 const addParticle = arr => [...arr, Particle()];
 // 2 move particles
 const moveParticles = arr => arr.map(Particle.move);
+
+const DIlog = (logger, info) => logger.log(info);
+// we can stub console.log
+const cnsl = {
+  log: x => {
+    // do nothing
+    console.log(x);
+  },
+};
+
 const loop = particlesArray => () => {
   const newParticles = pipe(
-    // adding some logs
-    tap(() => console.log('------ INIT TRANSFORMATIONS -------')),
+    // 1-. Dependency Injection
+    tap(() => DIlog(cnsl, '------ INIT TRANSFORMATIONS -------')),
     addParticle,
     tap(x => console.log('Number of particles::', x.length)),
     moveParticles,
@@ -24,5 +34,4 @@ const loop = particlesArray => () => {
   // last .- Loop
   requestAnimationFrame(loop(newParticles));
 };
-
 requestAnimationFrame(loop(particles));
