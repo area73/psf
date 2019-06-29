@@ -71,3 +71,5 @@ There’s two main ways they do dealt with this:
     A side effect isn’t a side effect until it actually happens. 
     So we will wrap our unsafe function inside another function -_> the effect functor.
     The Effect functor, works by wrapping everything behind a function. To run the effects, we have to make a deliberate effort to run the wrapper function.
+    
+    In our case we are goinf tp sue a monad cal maybe
