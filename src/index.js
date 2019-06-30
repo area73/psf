@@ -11,10 +11,9 @@ const particles = [
 // Whether to check if console exist or not
 // hint:: we cannot check something like this:
 // isConsoleDefined(console)
-// b ecause int the case that conosle is not defined we will get a Uncaught ReferenceError:
-// So we need to do aternary and check for typeof and assign a new value or returning value
+// because in the case that console is not defined we will get a Uncaught ReferenceError:
+// So we need to do a ternary and check for typeof and assign a new value (null) or returning value
 const cs = typeof console === 'undefined' ? null : console;
-console.log('---->', cs);
 
 // 1 add Particle to the list
 const addParticle = arr => [...arr, Particle()];
@@ -35,6 +34,7 @@ const loop = particlesArray => () => {
     // 1-. Dependency Injection
     tap(() => DIlog(cnsl, '------ INIT TRANSFORMATIONS -------')),
     addParticle,
+    // 2-. Using a Maybe monad
     tap(x => Maybe.of(cs).map(() => cs.log('Number of particles::', x.length))),
     moveParticles,
     tap(() => console.log('------ END TRANSFORMATIONS -------')),

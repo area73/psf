@@ -66,10 +66,12 @@ There’s two main ways they do dealt with this:
     This is very interesting for unit testing our functions because we can stub our impure ends 
     and pass them as parameters
 
-   2-. Using an Effect functor, (procrastination)
+2-. Using an Effect functor, (procrastination)
     
     A side effect isn’t a side effect until it actually happens. 
     So we will wrap our unsafe function inside another function -_> the effect functor.
     The Effect functor, works by wrapping everything behind a function. To run the effects, we have to make a deliberate effort to run the wrapper function.
     
-    In our case we are goinf tp sue a monad cal maybe
+    In our case we are goinf to use a monad call maybe
+
+
