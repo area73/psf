@@ -74,4 +74,7 @@ There’s two main ways they do dealt with this:
     
     In our case we are goinf to use a monad call maybe
 
+## 09 Creating a logger
 
+We want to cleanup a little bit out log system combining both techniques previous presented.
+Hint use a function decorator ?????
