@@ -78,3 +78,12 @@ There’s two main ways they do dealt with this:
 
 We want to cleanup a little bit out log system combining both techniques previous presented.
 Hint use a function decorator ?????
+
+## 10 Create a display system
+Now tht we have particles and we are moving them we want to plot those particles into a visual 
+display.<br>
+This display will be impure since it is something that we are getting from outside.<br>
+In our example we are going to use canvas to display particles.
+ 
+ We are creating a an object call Display that will hold all our data definition to display our 
+ particles

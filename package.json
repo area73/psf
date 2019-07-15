@@ -10,7 +10,7 @@
     "test-no-watch": "jest --config=jest.config.js",
     "eslint": "eslint \"src/**/*.js\"",
     "validate": "npm-run-all --parallel eslint test-no-watch",
-    "precommit": "npm run eslint",
+    "precommit": "npm run eslint -- --fix",
     "prepush": "npm run validate"
   },
   "repository": {
