@@ -80,10 +80,16 @@ We want to cleanup a little bit out log system combining both techniques previou
 Hint use a function decorator ?????
 
 ## 10 Create a display system
-Now tht we have particles and we are moving them we want to plot those particles into a visual 
+Now that we have particles and we are moving them we want to plot those particles into a visual 
 display.<br>
 This display will be impure since it is something that we are getting from outside.<br>
 In our example we are going to use canvas to display particles.
  
  We are creating a an object call Display that will hold all our data definition to display our 
- particles
+ particles.
+ 
+1) CanvasDisplay will have a default object with document, id , context, canvas, width & height
+
+2) So after building our display object we will need to call it after all other pure functions, 
+so we are procrastinating the visual representation to the very last. To do so we create another 
+pipe with all the task that we have to run on display and 

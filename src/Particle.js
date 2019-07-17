@@ -5,7 +5,7 @@ export const Particle = ({
   position = Vector(),
   acceleration = Vector(),
   velocity = Vector(),
-  color = 0xffffff,
+  color = '#99ff2222',
   size = 2,
 } = {}) => ({
   position,
