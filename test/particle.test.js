@@ -23,7 +23,7 @@ describe('λ :: Test Particle', () => {
     });
     test('a particle must have a default color in Hex code', () => {
       const part = Particle();
-      expect(part.color).toBeNumber();
+      expect(part.color).toBeString();
     });
     test('a particle must have a default size', () => {
       const part = Particle();
@@ -49,7 +49,7 @@ describe('λ :: Test Particle', () => {
         position: Vector(10, 20), // position
         velocity: Vector(2, 5), // velocity
         acceleration: Vector(5, 5), // acceleration
-        color: 0xffffff,
+        color: 'ffffff22',
         size: 2,
       });
 
@@ -57,7 +57,7 @@ describe('λ :: Test Particle', () => {
         position: { x: 12, y: 25 },
         velocity: { x: 7, y: 10 },
         acceleration: { x: 5, y: 5 },
-        color: 0xffffff,
+        color: 'ffffff22',
         size: 2,
       });
     });
