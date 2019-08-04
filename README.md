@@ -93,3 +93,13 @@ In our example we are going to use canvas to display particles.
 2) So after building our display object we will need to call it after all other pure functions, 
 so we are procrastinating the visual representation to the very last. To do so we create another 
 pipe with all the task that we have to run on display and 
+
+# 11 Adding random particles
+We are creating new particles but all our new particles have the same color size and are plotting on the same position with no acceleration or velocity.
+
+We want to fix this and create random particles.
+
+Hint bonus:  
+Create curry
+Create uncurry
+create a placeholder

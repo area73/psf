@@ -1,11 +1,10 @@
 import { Vector } from './Vector.js';
 
-// 1::  particle members
 export const Particle = ({
   position = Vector(),
   acceleration = Vector(),
   velocity = Vector(),
-  color = '#99ff2222',
+  color = '#99ff22aa',
   size = 2,
 } = {}) => ({
   position,
@@ -15,16 +14,43 @@ export const Particle = ({
   size,
 });
 
-// 2 move a particle
-// to move a particle, the position will be set according to the velocity of the particle
-// and the velocity will be set according to the acceleration of the same particle
-// We need to do:
-//    new position => position + velocity  ==> vector.add
-//    new velocity => velocity + acceleration ==> vector.add
-
-// n :: object -> object
 Particle.move = part => ({
   ...part,
   position: Vector.add(part.position, part.velocity),
   velocity: Vector.add(part.velocity, part.acceleration),
+});
+
+const randomNumber = n => Math.round(n * Math.random());
+
+const randomPositiveVector = (a, b) => {
+  const newB = b || a;
+  return Vector(randomNumber(a), randomNumber(newB));
+};
+
+const randomVector = (a, b) => {
+  const seed = () => (Math.random() > 0.5 ? 1 : -1);
+  const newA = a * seed();
+  const newB = (b || a) * seed();
+  return Vector(randomNumber(newA), randomNumber(newB));
+};
+
+Particle.updateProp = prop => particle => value => ({
+  ...particle,
+  ...{ [prop]: value },
+});
+
+Particle.randomVelocity = particle => n =>
+  Particle.updateProp('velocity')(particle)(randomVector(n));
+
+Particle.randomAcceleration = particle => n => ({
+  ...particle,
+  ...{ acceleration: randomVector(n) },
+});
+Particle.randomPosition = n => particle => ({
+  ...particle,
+  ...{ position: randomPositiveVector(n) },
+});
+Particle.randomSize = (particle, n) => ({
+  ...particle,
+  ...{ size: randomNumber(n) + 1 },
 });

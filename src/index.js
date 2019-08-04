@@ -1,3 +1,4 @@
+import { __, curry, uncurryN } from 'ramda';
 import { Particle } from './Particle.js';
 import { Vector } from './Vector.js';
 import { pipe, tap } from './functionalUtils.js';
@@ -10,7 +11,19 @@ const particles = [
 ];
 
 // 1 add Particle to the list
-const addParticle = arr => [...arr, Particle()];
+// const addParticle = arr => [...arr, Particle()];
+
+const addRandomParticle = arr => [
+  ...arr,
+  pipe(
+    // TODO::: PAra la posición no debería tener negativo
+    Particle.randomPosition(1500),
+    uncurryN(2, Particle.randomVelocity)(__, 20),
+    curry(Particle.randomSize)(__, 10),
+    tap(x => console.log(x.velocity)),
+  )(Particle()),
+];
+
 // 2 move particles
 const moveParticles = arr => arr.map(Particle.move);
 
@@ -30,8 +43,9 @@ const plotParticles = particlesArray => {
 const loop = particlesArray => () => {
   const newParticles = pipe(
     // logger('intro log::', x => x.length),
-    addParticle,
+    addRandomParticle,
     moveParticles,
+    // tap((x) => console.log(x.length)),
     tap(plotParticles),
   )(particlesArray);
   requestAnimationFrame(loop(newParticles));
