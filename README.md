@@ -103,3 +103,13 @@ Hint bonus:
 Create curry
 Create uncurry
 create a placeholder
+
+
+# 12 Adding emitters
+Now we want to emmit all the particles from one  emission point (or an array of emitters)
+
+We will create an emitter object, this object will have :
+
+Spread Angle (0 - 360 deg ~ 2*PI)
+Propulsion (vector)
+Position (vector)
